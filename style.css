@@ -1,0 +1,163 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft_Magenta: hsl(300, 69%, 71%);
+    --font-body: 'Open Sans', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+}
+body{
+    min-height:100vh;
+    background-image:url(./images/bg-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--Violet);
+    padding:1.5em 5em;
+    line-height: 1.5;
+    font-family: var(--font-body);
+    font-weight:400;
+}
+
+header{
+    width:100%;
+    height:100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width:185px;
+}
+
+.intro-container{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    margin-top:1.5em;
+}
+.image-container{
+    flex-basis:55%;
+}
+.intro-image{
+    width:100%;
+    height:100%;
+}
+.content-container{
+    flex-basis:45%;
+    height:100%;
+    align-self: flex-start;
+}
+
+.intro-title{
+    font-size:2.2rem;
+    font-weight: 700;
+    margin-top:1em;
+    color:#fff;
+    font-family: var(--font-heading);
+}
+
+.intro-description{
+    font-size:1rem;
+    margin-top:1em;
+    color:#fff;
+}
+
+.btn{
+    font-size:1.1rem;
+    padding:.8em 4em;
+    border-radius:5em;
+    color:var(--Violet);
+    background-color: #fff;
+    border:none;
+    margin-top:1em;
+    box-shadow: 5px 5px 5px hsl(257, 40%, 33%);
+    cursor: pointer;
+}
+.btn:hover{
+   background-color: var(--Soft_Magenta);
+   color:#fff;
+}
+.social-icons{
+    display: flex;
+    gap:1em;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top:7em;
+}
+.social-icon{
+    width:40px;height:40px;
+    border:1px solid #fff;
+    background-color:transparent;
+    border-radius: 50%;
+    color:#fff;
+    cursor: pointer;
+}
+i{
+    font-size:1.3rem;
+}
+.social-icon:hover{
+    border:1px solid var(--Soft_Magenta);
+    color:var(--Soft_Magenta);
+}
+@media only screen and (max-width:600px) {
+    body{
+        background-image: url(./images/bg-mobile.svg);
+        padding:2em 1.3em;
+    }
+    header{
+        height:60px;
+    }
+    .logo{
+        width:150px;
+    }
+   .intro-container{
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:1em;
+    text-align: center;
+   }
+   .image-container{
+    flex-basis: 40%;
+   }
+   .intro-title{
+    font-size: 1.6rem;
+   }
+   .intro-description{
+    font-size: .8rem;
+   }
+   .btn{
+    padding:.5em 3.5em;
+   }
+   .social-icons{
+    justify-content: center;
+    margin-top:1.3em;
+}
+}
+
+
+@media only screen and (max-width:900px) {
+    body{
+        background-image: url(./images/bg-mobile.svg);
+        padding: 2em 3em;
+    }
+    .intro-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro-tile{
+        font-size:1.45rem;
+    }
+    .intro-description{
+        font-size:.85rem;
+    }
+    .social-icons{
+        justify-content: center;
+        margin-top:2em;
+    }
+} 
+
